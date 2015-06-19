@@ -6,8 +6,9 @@
 
 meteor-platform
 materialize:materialize
-useraccounts:materialize
 iron:router
-accounts-password
 meteortoys:allthings
 alanning:roles
+useraccounts:core
+useraccounts:materialize
+accounts-password
