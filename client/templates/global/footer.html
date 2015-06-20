@@ -1,5 +1,18 @@
 <template name="footer">
-    <footer>
-        <p>SteamCalculator</p>
-    </footer>
+  <footer class="page-footer blue-grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p class="grey-text text-lighten-4">
+            Users {{getPublishedCount 'userCount'}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Created with <i class="tiny mdi-action-favorite"></i> by Black Forest Labs.
+      </div>
+    </div>
+  </footer>
 </template>

@@ -1,0 +1,86 @@
+/* Game_List*/
+td {
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+
+.game_list_header {
+	width: 100%;
+	height: 50px;
+	background: rgb(26, 30, 36); 	/* Fall-back for browsers that don't support rgba */
+	background: rgba(0, 0, 0, .15);
+	border-bottom: 1px solid #4297ce;
+}
+
+.game_row  {
+	width: 100%;
+	border-bottom: 1px solid #393939;
+}
+
+.header_item, .header_price {
+	margin: 0 0 0 0;
+	color:#ffffff;
+	text-align: left;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.header_price {
+	text-align: right;
+}
+
+.game_row:hover {
+	background: rgb(26, 30, 36); 	/* Fall-back for browsers that don't support rgba */
+	background: rgba(0, 0, 0, .075);
+}
+
+.game_row:hover .list_number p {
+	color: #ffffff;
+}
+
+.game_row:hover .list_price p {
+	color: #ffffff;
+}
+
+.game_row:hover .list_item p {
+	color: #4297ce;
+}
+
+.list_number {
+	width: 75px;
+	min-width: 75px;
+}
+
+.list_item {
+	max-width: 50px;
+	min-width: 50px;
+}
+
+.list_price {
+	width: 120px;
+	min-width: 120px;
+}
+
+.list_number p, .list_item  p {
+	padding: 10px 0 10px 0;
+}
+
+.list_price p {
+	padding: 10px 25px 10px 0;
+}
+
+.game_row p {
+	display: block;
+	color:#898989;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.list_price p {
+	text-align: left;
+}

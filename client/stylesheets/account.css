@@ -1,0 +1,182 @@
+/* Account */
+
+.status_color_offline {
+    color: #ff2741
+}
+
+.status_color_online {
+    color: #abcb39
+}
+
+.status_color_away {
+     color: #fff83c
+}
+
+.status_color_lookingfortrade {
+    color: #773dc6
+}
+
+.sc_steam_info {
+	width: 100%;
+	min-width: 260px;
+	margin: 20px 0 20px 0;
+	background: rgb(26, 30, 36); 	/* Fall-back for browsers that don't support rgba */
+	background: rgba(0, 0, 0, .15);
+}
+
+.list_header {
+	font-size: 1.3em;
+}
+
+.sc_steam_list {
+	text-align: right;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	list-style-type: none;
+}
+
+.sc_steam_list li {
+	list-style: none;
+	display: inline-block;
+	margin: 20px 10px 20px 10px;
+}
+
+.account {
+	width: 100%;
+	min-width: 260px;
+	margin: 20px 0 20px 0;
+	background: rgb(26, 30, 36); 	/* Fall-back for browsers that don't support rgba */
+	background: rgba(0, 0, 0, .15);
+	display: -webkit-box;     	 	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         		/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      		/* TWEENER - IE 10 */
+	display: -webkit-flex;     		/* NEW - Chrome */
+	display: flex;           		/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-direction: row;
+	-webkit-flex-direction: row;
+    -ms-flex-direction: row;
+}
+
+.account_box1 {
+	width: 180px;
+	min-width: 180px;
+	min-height: 160px;
+	margin: 10px 10px 10px 10px;
+	border-right: 1px solid #4297ce;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+.avatar {
+	float: left;
+	width: 160px;
+	height: 160px;
+	display: block;
+	border-radius: 5px;
+}
+
+.level {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2.5em;
+	line-height: 1.2em;
+}
+
+.experience {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	color: #666;
+}
+
+.account_box2 {
+	width: 100%;
+	margin: 10px 10px 10px 10px;
+	-webkit-box-flex: 1;
+	webkit-flex: 1; /* Safari 6.1+ */
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1 1 auto;
+	display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;              /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;           /* TWEENER - IE 10 */
+    display: -webkit-flex;          /* NEW - Chrome */
+    display: flex;                	/* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+
+.gamertag, .profile_text {
+	color: #ededed;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 3.0em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-moz-binding: url( 'bindings.xml#ellipsis' );
+}
+
+.status {
+	font-size: 1.5em;
+	line-height: 1.3em;
+}
+
+.profile_text {
+	margin: 0;
+	font-size: 0.9em;
+	line-height: 1.3em;
+}
+
+.profile_value {
+    vertical-align: middle;
+    text-align:center;
+	color:#ffffff;
+	font-weight: 400;
+	font-size: 45px;
+}
+
+.country_flag {
+	vertical-align: 0;
+	margin: 0 5px 0 0;
+}
+
+.country {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.account_box3 {
+	position: relative;
+	width: 260px;
+	min-width: 260px;
+	margin: 10px 10px 10px 10px;
+}
+
+.games_number, .profile_value {
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: normal;
+}
+
+.games_number {
+	margin: 5px 0 0 0;
+	color: #ededed;
+	font-weight: 400;
+	font-size: 14px;
+}

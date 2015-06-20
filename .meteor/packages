@@ -9,6 +9,7 @@ materialize:materialize
 iron:router
 meteortoys:allthings
 alanning:roles
-useraccounts:core
-useraccounts:materialize
 accounts-password
+mrt:accounts-steam
+accounts-ui
+tmeasday:publish-counts

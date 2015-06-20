@@ -1,0 +1,37 @@
+<template name="gameCollection">
+  <table class="table item-list">
+    <thead class="game_list_header">
+      <tr>
+        <th class="list_number"></th>
+        <th class="list_item">
+            <p class="header_item">Item</p>
+        </th>
+        <th class="list_price">
+            <p class="header_price">Price</p>
+        </th>
+        <th class="list_price">
+            <p class="header_price">Playtime</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each apps}}
+      <tr class="game_row">
+        <td class="game_counter gray02">
+          1
+        </td>
+        <td>
+          {{name}}
+          <small>{{id}}</small>
+        </td>
+        <td class="game_price gray02">
+          {{price}}
+        </td>
+        <td class="game_price gray02">
+          {{playtime}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

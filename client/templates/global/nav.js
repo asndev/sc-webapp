@@ -1,3 +1,3 @@
 Template.nav.rendered = function() {
-    $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav();
 };

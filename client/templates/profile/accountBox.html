@@ -1,0 +1,39 @@
+<template name="accountBox">
+  <div class="account">
+    <div class="account_box1">
+      <img class="avatar" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/84/84952099023927481e6bb34f6d8560246f9133db_full.jpg" border="0" alt="Avatar" title="Avatar">
+      <p class="level">
+        Level <span class="blue"> {{level}}</span>
+      </p>
+    </div>
+    <div class="account_box2">
+      <div class="box_flex2">
+      <p class="gamertag">{{profile_name}}</p>
+      <ul class="profile_text">
+        <li>
+          <span class="country">
+          <img class="country_flag" src="http://cdn.steamcommunity.com/public/images/countryflags/de.gif" border="0" alt="country" title="country">
+          {{country}}
+          </span>
+        </li>
+      </ul>
+      </div>
+      <div class="profile_box"><!-- For Flexbox -->
+          <ul class="profile_text">
+            <li class="status">Status <span class="status_color_offline">{{status}}</span></li>
+            <li>Total Playing Time <span class="blue">{{total_playtime}}</span></li>
+            <li>Steam Member Since <span class="blue">{{creation_time}}</span></li>
+          </ul>
+      </div>
+    </div>
+    <div class="account_box3">
+      <div class="pricetotal">
+      <p class="profile_value">
+          <span class="games_number">
+            <span class="blue">{{game_count}} games</span>
+          </span><span class="games_number gray01"> with a value of</span><br>
+          ${{value_in_dollar}}</p>
+      </div>
+    </div>
+  </div>
+</template>

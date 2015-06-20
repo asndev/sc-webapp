@@ -1,2 +1,113 @@
 
-body {}
+html {
+  color: white;
+  background: #1a1e24;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-image: -moz-linear-gradient(left top,#162a3b 0%,#1a1e24 100%);
+	background-image: -webkit-gradient(linear,left top, right bottom,color-stop(0, #162a3b),color-stop(1, #1a1e24 ));
+	background: -webkit-linear-gradient(left top, #162a3b 0%, #1a1e24  100%);
+	background: -o-linear-gradient(left top, #162a3b 0%, #1a1e24  100%);
+	background: -ms-linear-gradient(left top, #162a3b 0%, #1a1e24  100%);
+	background: linear-gradient(left top, #162a3b 0%, #1a1e24  100%);
+	background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 , .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.blue {
+	color:#4398cf;
+  background-color: transparent !important;
+}
+
+.green {
+	color:#abcb39;
+  background-color: transparent !important;
+}
+
+.gray01 {
+	color:#666;
+  background-color: transparent !important;
+}
+
+.gray02 {
+	color:#898989;
+  background-color: transparent !important;
+}
+
+.sc_steamcalculator {
+	width: 500px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.sc-input[type="text"] {
+  display: block;
+  padding: 0 10px 0 10px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: white;
+  color: black;
+}
+
+#canvas_logo_box {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+}
+
+#canvas_logo_wheel {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	background: url("/images/sc_steamcalculator_wheel.svg") repeat scroll 0 0 / 180px;
+	background-position: center;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 100s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+#canvas_logo_stats {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	background: url("/images/sc_steamcalculator_stats.svg") repeat scroll 0 0 / 180px;
+	background-position: center;
+}
+
+.sc_steamcalculator_logo {
+	display: block;
+	width: 350px;
+	height: 40px;
+	margin: 20px auto 0 auto;
+	color: #ffffff;
+	background: url("/images/sc_steamcalculator_header.svg") repeat scroll 0 0 / 350px;
+	background-position: center;
+
+}
