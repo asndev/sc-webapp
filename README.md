@@ -5,3 +5,5 @@ To start the server type in:
 ```
 meteor
 ```
+
+TODOS: many.
