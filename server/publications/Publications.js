@@ -12,10 +12,41 @@ Meteor.publish('userData', function () {
     });
 });
 
-Meteor.publish('collectionCounts', function() {
-  Counts.publish(this, 'userCount', Meteor.users.find());
+Meteor.publish('userStatus', function() {
+  return Meteor.users.find({ 'status.online': true });
 });
 
-Meteor.publish('singleSteamAccount', function(id) {
-  return SteamAccounts.find({ _id: "oxcFpGBDjtcbJvCCD" });
+Meteor.users.find({ 'status.online': true }).observe({
+  added: function(id) {
+    console.log(id + ' just came online');
+  },
+  removed: function(id) {
+    console.log(id + ' just went offline');
+  }
+});
+
+Meteor.publish('collectionCounts', function() {
+  Counts.publish(this, 'userCount', Meteor.users.find());
+  Counts.publish(this, 'steamAccountsCount', SteamAccounts.find());
+  Counts.publish(this, 'appCount', Apps.find());
+});
+
+Meteor.publish('steamAccounts', function() {
+  return SteamAccounts.find();
+});
+
+Meteor.publish('apps', function() {
+  return Apps.find();
+})
+
+Meteor.publish('singleSteamAccount', function(steamId) {
+  return SteamAccounts.find({ steam_id: steamId });
+});
+
+Meteor.publish('appsForSteamAccountId', function(steamId) {
+  var appsArray = SteamAccounts
+    .find({ steam_id: steamId }, { fields: { apps: 1 }})
+    .fetch().map(function(e) { return e.apps });
+
+  return Apps.find({ 'app_id': { $in: appsArray }});
 });

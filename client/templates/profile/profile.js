@@ -1,7 +1,12 @@
 Template.profile.helpers({
-
   profileData: function() {
-    return SteamAccounts.findOne('oxcFpGBDjtcbJvCCD');
+    console.log('SteamAccount in Profile Helper: ', !!this.steamAccount);
+    return this.steamAccount;
+  },
+
+  appsData: function() {
+    console.log('Apps in Profile Helper: ', !!this.appsData);
+    return this.appsData;
   }
 
 });

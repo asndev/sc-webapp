@@ -6,7 +6,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="{{pathFor 'home'}}">HOME</a></li>
         <li><a href="{{pathFor 'faq'}}">FAQ</a></li>
-        <li>{{> loginButtons}}</li>
+        <li>{{> loginButtons align="right"}}</li>
         {{#if currentUser}}
         <li><a href="{{pathFor 'userdashboard'}}">
           <i class="mdi-action-perm-identity"></i>
@@ -14,11 +14,14 @@
         {{/if}}
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">
-          <input id="search" type="search" placeholder="search">
+        <li><a href="{{pathFor 'home'}}">HOME</a></li>
+        <li><a href="{{pathFor 'faq'}}">FAQ</a></li>
+        <li>{{> loginButtons align="right"}}</li>
+        {{#if currentUser}}
+        <li><a href="{{pathFor 'userdashboard'}}">
+          <i class="mdi-action-perm-identity"></i>
         </a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        {{/if}}
       </ul>
     </div>
   </nav>

@@ -13,6 +13,8 @@ var OnBeforeActions = {
   }
 };
 
+// TODO: BIG TODO - extract  to route controller
+
 Router.route('/', {
   name: 'home',
   template: 'home'
@@ -34,15 +36,38 @@ Router.route('/profile/:_id', {
 
   onBeforeAction: function() {
     // TODO: check id and trigger calculation
-    this.next();
+    if (!SteamAccounts.findOne({ steam_id: this.params._id})) {
+      console.log('No Steam Account was found.');
+      console.info('You should try one of these:',
+        SteamAccounts
+          .find({}, { fields: { 'steam_id': 1 }})
+          .fetch()
+          .map(function(e) { return e.steam_id; }));
+      Router.go('home');
+    } else {
+      this.next();
+    }
   },
 
   waitOn: function() {
-    return Meteor.subscribe('singleSteamAccount', this.params._id);
+    return Meteor.subscribe('singleSteamAccount', this.params._id) &&
+      Meteor.subscribe('appsForSteamAccountId', this.params._id);
   },
 
   action: function() {
     console.log('Rendering profile template with id: ', this.params._id);
-    return this.render('profile', this.params._id);
+    var apps = SteamAccounts
+      .findOne({ steam_id: this.params._id }, { fields: { apps: 1 }});
+    var appsArray = apps && apps.apps;
+
+    console.log('AppsArray', appsArray);
+    return this.render('profile', {
+      data: {
+        steamAccount: SteamAccounts.findOne({ "steam_id": this.params._id }),
+        appsData: {
+          apps: Apps.find({ 'app_id': { $in: appsArray }})
+        }
+      }
+    });
   }
 });
