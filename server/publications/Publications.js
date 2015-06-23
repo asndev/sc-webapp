@@ -35,18 +35,14 @@ Meteor.publish('steamAccounts', function() {
   return SteamAccounts.find();
 });
 
-Meteor.publish('apps', function() {
-  return Apps.find();
-})
-
 Meteor.publish('singleSteamAccount', function(steamId) {
   return SteamAccounts.find({ steam_id: steamId });
 });
 
 Meteor.publish('appsForSteamAccountId', function(steamId) {
-  var appsArray = SteamAccounts
-    .find({ steam_id: steamId }, { fields: { apps: 1 }})
-    .fetch().map(function(e) { return e.apps });
+  var apps = SteamAccounts
+    .findOne({ steam_id: steamId }, { fields: { apps: 1 }});
+  var appsArray = apps && apps.apps;
 
   return Apps.find({ 'app_id': { $in: appsArray }});
 });

@@ -50,8 +50,8 @@ Router.route('/profile/:_id', {
   },
 
   waitOn: function() {
-    return Meteor.subscribe('singleSteamAccount', this.params._id) &&
-      Meteor.subscribe('appsForSteamAccountId', this.params._id);
+    return [Meteor.subscribe('appsForSteamAccountId', this.params._id),
+      Meteor.subscribe('singleSteamAccount', this.params._id)];
   },
 
   action: function() {
