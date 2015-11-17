@@ -1,5 +1,5 @@
 # sc-webapp
-The SteamCalculator webapp project built with Meteor
+Example project using Meteor
 
 To start the server type in:
 ```
